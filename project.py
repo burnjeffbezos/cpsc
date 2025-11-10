@@ -10,3 +10,7 @@ def main():
 the_real_input = main()
 print(the_real_input)
 #
+def parse_input(num_input):
+    is_hex_YN = True
+    return is_hex_YN
+    
