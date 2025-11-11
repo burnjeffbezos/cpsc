@@ -24,7 +24,8 @@ def decimal_to_binary(dec):
 #
 def hex_to_binary(hex):
     hexlist = []
-    for c in hex:
+    newhex = hex.replace("0x", "")
+    for c in newhex:
         if c <= 9:
             hexlist.append(c)
         if type(c) is str:
