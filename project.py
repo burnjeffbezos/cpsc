@@ -10,7 +10,7 @@ print(the_real_input)
 #
 def parse_input(num_input):
     is_hex_YN = False
-    if 'x' in num_input:
+    if '0x' in num_input:
         is_hex_YN = True
     return is_hex_YN
 #
@@ -30,7 +30,12 @@ def hex_to_binary(hex):
             hexlist.append(c)
         if type(c) is str:
             num = ord(c) + 9
-            hexlist.append(0)
+            hexlist.append(num)
+    #
+    #TEST CODE
+    print(hexlist)
+    print(sum(hexlist))
+    #
     decimal = sum(hexlist)
     binary = decimal_to_binary(decimal)
     return binary
