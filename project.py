@@ -23,7 +23,13 @@ def decimal_to_binary(dec):
     return binary
 #
 def hex_to_binary(hex):
-    binary = hex
+    hexlist = []
+    for c in hex:
+        if c <= 9:
+            hexlist.append(c)
+        if type(c) is str:
+            hexlist.append(ord(c) - ord('a') + 1)
+    binary = sum(hexlist)
     return binary
 #
 #
