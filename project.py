@@ -23,22 +23,16 @@ def decimal_to_binary(dec):
     return binary
 #
 def hex_to_binary(hex):
-    hexlist = []
     newhex = hex.replace("0x", "")
-    for c in newhex:
-        if type(c) is int:
-            hexlist.append(c)
-        if type(c) is str:
-            num = ord(c) + 9
-            hexlist.append(num)
+    decimal = str(int(newhex, 16))
+    binary = decimal_to_binary(int(decimal))
     #
-    #TEST CODE
-    print(hexlist)
-    print(sum(hexlist))
+    #TEST CODE: REMOVE BEFORE SUBMISSION
+    print(newhex)
+    print(decimal)
+    print(binary)
     #
-    decimal = sum(hexlist)
-    binary = decimal_to_binary(decimal)
-    return binary
+    return int(binary)
 #
 #
 def convert_to_binary(unconverted_number):
