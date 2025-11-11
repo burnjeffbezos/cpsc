@@ -7,6 +7,7 @@ def main():
     return num_input
 #
 #
+# TEST: REMOVE BEFORE UPLOADING
 the_real_input = main()
 print(the_real_input)
 #
@@ -18,23 +19,23 @@ def parse_input(num_input):
     return is_hex_YN
 #
 #
+# TEST: REMOVE BEFORE UPLOADING
 the_real_truth = parse_input(the_real_input)
 print(the_real_truth)
 #
 #
-def convert_to_binary(unconverted_number):
-    # this code converts hex or decimal to binary
-    # pseudo code below
-    #
-    # if real truth = true
-    #   this is a hex number
-    #   convert this to binary
-    #   converted number =
-    # if real truth = false
-    #   this is a decimal number
-    #   convert this to binary
-    #   converted number =
-    # return converted_number
+def decimal_to_binary():
     pass
+#
+def hex_to_binary():
+    pass
+#
+#
+def convert_to_binary(unconverted_number):
+    if the_real_truth == True:
+        converted_number = hex_to_binary(unconverted_number)
+    if the_real_truth == False:
+        converted_number = decimal_to_binary(unconverted_number)
+    return converted_number
 #
 #
