@@ -26,11 +26,13 @@ def hex_to_binary(hex):
     hexlist = []
     newhex = hex.replace("0x", "")
     for c in newhex:
-        if c <= 9:
+        if type(c) is int:
             hexlist.append(c)
         if type(c) is str:
-            hexlist.append(ord(c) - ord('a') + 1)
-    binary = sum(hexlist)
+            num = ord(c) + 9
+            hexlist.append(0)
+    decimal = sum(hexlist)
+    binary = decimal_to_binary(decimal)
     return binary
 #
 #
