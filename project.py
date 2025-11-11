@@ -24,8 +24,9 @@ the_real_truth = parse_input(the_real_input)
 print(the_real_truth)
 #
 #
-def decimal_to_binary():
-    pass
+def decimal_to_binary(dec):
+    binary = bin(int(dec)).replace("0b", "")
+    return binary
 #
 def hex_to_binary():
     pass
