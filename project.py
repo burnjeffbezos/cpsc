@@ -70,6 +70,6 @@ def test():
 #
 #
 #
-# now we run the coe! :)
+# now we run the code! :)
 run()
 test()
