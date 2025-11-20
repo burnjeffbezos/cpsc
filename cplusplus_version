@@ -73,6 +73,12 @@ string convert_to_binary(const string& unconverted_number) {
     else
         return decimal_to_binary(unconverted_number);
 }
+//  test function
+void test() {
+    cout << "Your input:" << the_real_input << '\n';
+    cout << "Number is Hex:" << boolalpha << the_real_truth << '\n';
+    cout << "Your number in Binary is:" << the_real_output << '\n';
+}
 // below will be the end of the program
 int main() {
     run();
