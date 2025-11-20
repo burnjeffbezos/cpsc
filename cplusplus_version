@@ -22,6 +22,12 @@ string main_input() {
     cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
     string num_input;
     getline(cin, num_input);
+    return num_input;
+}
+void run() {
+    the_real_input = main_input();
+    the_real_truth = parse_input(the_real_input);
+    the_real_output = convert_to_binary(the_real_input);
 }
 //
 // below will be the end of the python program
