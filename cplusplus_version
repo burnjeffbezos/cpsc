@@ -1,14 +1,17 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 //
 //
-//
+// below will be the end of the python program
 int main() {
-    int num;
-    cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
-    cin >> num;
+    run();
+    test();
     return 0;
 }
 // is this a comment? omg! it is!
-// 
+//   int num;
+//    cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
+//    cin >> num;
+//    return 0;
