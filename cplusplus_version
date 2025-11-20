@@ -66,6 +66,12 @@ string hex_to_binary(const string& hex) {
     // ^^ prints
     return binary;
 }
+string convert_to_binary(const string& unconverted_number) {
+    if (the_real_truth)
+        return hex_to_binary(unconverted_number);
+    else
+        return decimal_to_binary(unconverted_number);
+}
 // below will be the end of the python program
 int main() {
     run();
