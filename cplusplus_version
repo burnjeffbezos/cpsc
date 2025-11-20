@@ -18,17 +18,20 @@ string convert_to_binary(const string&);
 void   test();
 //
 // functions
+//  main input function
 string main_input() {
     cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
     string num_input;
     getline(cin, num_input);
     return num_input;
 }
+//  run function
 void run() {
     the_real_input = main_input();
     the_real_truth = parse_input(the_real_input);
     the_real_output = convert_to_binary(the_real_input);
 }
+//  parse input function
 bool parse_input(const string& num_input) {
     bool is_hex_YN = false;
     string lowered = num_input;
@@ -38,7 +41,16 @@ bool parse_input(const string& num_input) {
         is_hex_YN = true;
     return is_hex_YN;
 }
-//
+//  decimal to binary function
+string decimal_to_binary(const string& dec) {
+    long long value = stoll(dec); // the internet told me to use long long "for safety"
+    string binary;
+    do {
+        binary.insert(binary.begin(), 1, (value & 1) ? '1' : '0');
+        value >>= 1;
+    } while (value > 0);
+    return binary;
+}
 // below will be the end of the python program
 int main() {
     run();
