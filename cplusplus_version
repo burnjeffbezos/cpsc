@@ -51,6 +51,21 @@ string decimal_to_binary(const string& dec) {
     } while (value > 0);
     return binary;
 }
+//  hex to binary function
+string hex_to_binary(const string& hex) {
+    string newhex = hex;
+    if (newhex.rfind("0x", 0) == 0 || newhex.rfind("0X", 0) == 0)
+        newhex = newhex.substr(2);
+    // ^^ removes 0x of hex
+    long long decimal = stoll(newhex, nullptr, 16);
+    // ^^ convert hex (without 0x) to decimal
+    string binary = decimal_to_binary(to_string(decimal));
+    // ^^ convert decimal to binary
+    cout << "Your Hex number is: " << newhex << '\n';
+    cout << "Its Decimal equivalent is: " << decimal << '\n';
+    // ^^ prints
+    return binary;
+}
 // below will be the end of the python program
 int main() {
     run();
