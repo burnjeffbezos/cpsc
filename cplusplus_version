@@ -3,9 +3,24 @@
 #include <algorithm>
 using namespace std;
 //
+// globals
+string the_real_input;
+bool the_real_truth;
+string the_real_output;
+//
+// the part where i say the things (declarations)
+string main_input();
+void   run();
+bool   parse_input(const string&);
+string decimal_to_binary(const string&);
+string hex_to_binary(const string&);
+string convert_to_binary(const string&);
+void   test();
+//
+//
 //
 // below will be the end of the python program
-int main() {
+string main() {
     run();
     test();
     return 0;
