@@ -1,8 +1,17 @@
 #include <iostream>
+#include <string>
+using namespace std;
+//
+//
+//
 int main() {
-    std::cout << "Test" << std::endl;
+    string num;
+    cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x)";
+    cin >> num;
     return 0;
 }
 // is this a comment? omg! it is!
 // std::cout << "THIS IS YOUR TEXT" << std::endl;
-// ^ this is a print line
+// ^ this is a print line WITHOUT namespace std;
+// main
+// std::string num_input = 
