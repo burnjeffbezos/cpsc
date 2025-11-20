@@ -29,6 +29,15 @@ void run() {
     the_real_truth = parse_input(the_real_input);
     the_real_output = convert_to_binary(the_real_input);
 }
+bool parse_input(const string& num_input) {
+    bool is_hex_YN = false;
+    string lowered = num_input;
+    transform(lowered.begin(), lowered.end(), lowered.begin(),
+                   [](unsigned char c){ return tolower(c); });
+    if (lowered.find("0x") != string::npos);
+        is_hex_YN = true;
+    return is_hex_YN;
+}
 //
 // below will be the end of the python program
 int main() {
