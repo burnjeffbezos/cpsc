@@ -17,16 +17,17 @@ string hex_to_binary(const string&);
 string convert_to_binary(const string&);
 void   test();
 //
-//
+// functions
+string main_input() {
+    cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
+    string num_input;
+    getline(cin, num_input);
+}
 //
 // below will be the end of the python program
-string main() {
+int main() {
     run();
     test();
     return 0;
 }
 // is this a comment? omg! it is!
-//   int num;
-//    cout << "Please enter a number in either decimal or hexidecimal. (For hexidecimal, please start the number with 0x) ";
-//    cin >> num;
-//    return 0;
